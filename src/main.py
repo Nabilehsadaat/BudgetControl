@@ -46,5 +46,16 @@ with col_a:
 with col_b:
     if st.button("Alle Transaktionen löschen"):
         transactions = []
-        st.success("Alle Transaktionen gelöscht!")
-        
+        st.success("Alle Transaktionen gelöscht!")        
+
+
+# Anzeige der Transaktionen
+st.warning("Show.")
+
+if  transactions:
+    df = pd.DataFrame(transactions)
+    st.write("Meine Transaktionen")
+    st.dataframe(df)
+    st.warning("Meine Transaktionen.")
+else:
+    st.warning("Noch keine Transaktionen.")
