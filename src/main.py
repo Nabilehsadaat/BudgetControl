@@ -47,10 +47,4 @@ with col_b:
     if st.button("Alle Transaktionen löschen"):
         transactions = []
         st.success("Alle Transaktionen gelöscht!")
-#ergebnis 
-if st.session_state.transaktionen:
-    df = pd.DataFrame(st.session_state.transaktionen)
-    st.write("Meine Transaktionen")
-    st.dataframe(df)
-else:
-    st.info("Keine Transaktionen vorhanden.")
+
